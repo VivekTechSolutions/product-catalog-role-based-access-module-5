@@ -1,5 +1,6 @@
 package com.example.product_catalog.entity;
 
+import com.example.product_catalog.enums.RoleEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,15 +17,16 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Enumerated(EnumType.STRING) // Store as string in DB
     @Column(nullable = false)
-    private String role; // ROLE_USER or ROLE_ADMIN
+    private RoleEnum role;
 
     // No-args constructor
     public User() {
     }
 
     // All-args constructor
-    public User(Long id, String username, String password, String role) {
+    public User(Long id, String username, String password, RoleEnum role) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -56,11 +58,11 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
+    public RoleEnum getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(RoleEnum role) {
         this.role = role;
     }
 }
