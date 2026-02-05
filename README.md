@@ -73,9 +73,13 @@ Uses Spring Security defaults (no custom crypto logic)
 🧾 Code Deliverables
 
   Security configuration class
+  
   JWT utility and filter
+  
   Role-based authorization rules
+  
   Secure password encoding
+  
   Stateless authentication setup
 
 
@@ -83,10 +87,15 @@ Uses Spring Security defaults (no custom crypto logic)
 --------------------------------------
 
  Passwords encoded using PasswordEncoder
+ 
  No hardcoded credentials
+ 
  JWT secret excluded from version control
+ 
  Stateless REST API design
+ 
  No custom encryption or hashing logic
+ 
  Clear separation of authentication and authorization
 
 
@@ -94,11 +103,17 @@ Uses Spring Security defaults (no custom crypto logic)
 -------------------------------------
 
   Form-based login using Spring Security
+  
   JWT issued on successful login
+  
   JWT validated for protected APIs
+  
   Role-based access control implemented
+  
   Unauthorized access prevented
+  
   Security pitfalls identified and addressed
+  
   Readable and well-documented configuration
 
 🏁 Conclusion
